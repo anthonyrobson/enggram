@@ -1,0 +1,28 @@
+\documentclass[a4paper,11pt]{book}
+
+\usepackage{multirow}
+
+\newcommand{\tl}{\textit}
+
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)%
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\newsavebox\mybox
+\newenvironment{aquote}[1]
+  {\savebox\mybox{#1}\begin{quote}}
+  {\signed{\usebox\mybox}\end{quote}}
+
+\begin{document}
+
+\frontmatter
+\input{chapters/preface}
+
+\mainmatter
+\input{chapters/introduction}
+\input{chapters/irregularverbs}
+\input{chapters/adverbs}
+\input{chapters/prepositions}
+\input{chapters/conjunctions}
+
+\end{document}
